@@ -1,0 +1,15 @@
+@tailwind preflight;
+
+@tailwind utilities;
+
+.h-5vh {
+  height: 5vh;
+}
+
+.h-95vh {
+  height: 95vh;
+}
+
+.h-nav-input {
+  height: calc(5vh - 2px);
+}
