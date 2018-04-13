@@ -1,18 +1,18 @@
 <template>
   <ol class="list-reset">
-    <li v-for="item in items" v-bind:key="item.id" class="">
+    <li v-for="list in lists" v-bind:key="list.id" class="">
       <div class="border">
           <button type="button" name="button" class="w-full block"
-                  v-on:click="item.active = !item.active">
+                  v-on:click="list.active = !list.active">
             <h4 class="p-2 text-grey font-sans font-light block text-left">
-              {{item.name}}
+              {{list.name}}
             </h4>
           </button>
-        <ol class="list-reset" v-if="item.active" >
-          <li v-for="view in item.views" v-bind:key="view.id"
+        <ol class="list-reset" v-if="list.active" >
+          <li v-for="item in list.items" v-bind:key="item.id"
               class="bg-grey-light text-white p-2 border-white border-b">
               <h4 class="p-2 font-sans font-light ">
-                {{view.name}}
+                {{item.name}}
               </h4>
           </li>
         </ol>
@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'List',
-  props: ['items'],
+  props: ['list'],
   data() {
     return {
     };

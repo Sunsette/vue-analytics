@@ -14,7 +14,7 @@
   </div>
   <div class="flex h-95vh">
     <div class="h-auto w-1/6 max-w-1/6 border shadow">
-      <List v-bind:items="viewCollections"/>
+      <List v-bind:lists="viewCollections"/>
     </div>
     <div class="h-auto flex w-5/6">
       <Tile v-for="tile in tiles" v-bind:key="tile.id" v-bind:config="tile" />
@@ -46,7 +46,7 @@ export default {
         id: 1,
         name: 'Sales',
         active: false,
-        views: [{
+        items: [{
           id: 1,
           name: 'Sales Overview',
         }, {
@@ -57,7 +57,7 @@ export default {
         id: 2,
         name: 'Product',
         active: false,
-        views: [{
+        items: [{
           id: 1,
           name: 'Product Overview',
         }, {
@@ -75,6 +75,5 @@ export default {
 
 /*Component Css*/
 
-@import './components/HelloWorld.css';
 @import './components/Tile/Tile.css';
 </style>

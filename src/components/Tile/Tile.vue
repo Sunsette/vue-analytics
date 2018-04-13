@@ -9,12 +9,12 @@
 </template>
 
 <script>
+
 export default {
   name: 'Tile',
   props: ['config'],
   data() {
     return {
-      type: 'BarChart',
     };
   },
 };
