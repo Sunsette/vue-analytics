@@ -17,7 +17,8 @@
       <List v-bind:lists="viewCollections"/>
     </div>
     <div class="h-auto flex w-5/6">
-      <Tile v-for="tile in tiles" v-bind:key="tile.id" v-bind:config="tile" />
+      <Tile v-for="tile in tiles" v-bind:key="tile.id" v-bind:config="tile"
+@configChanged="handleConfigChange" />
     </div>
   </div>
 </div>
@@ -67,6 +68,14 @@ export default {
       }],
     };
   },
+  methods: {
+    handleConfigChange(selectedConfig, currentConfig) {
+      const selectedTile = this.tiles.find(tile => tile.id === currentConfig.id);
+      const index = this.tiles.indexOf(currentConfig);
+      selectedTile.type = selectedConfig.name;
+      this.$set(this.tiles, index, selectedTile);
+    },
+  },
 };
 </script>
 
@@ -76,4 +85,5 @@ export default {
 /*Component Css*/
 
 @import './components/Tile/Tile.css';
+@import './components/List/List.css';
 </style>

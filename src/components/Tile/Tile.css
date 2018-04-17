@@ -1,0 +1,11 @@
+.tile {
+  @apply .flex-auto .p-2 .mx-2 .mt-2 .border .shadow .h-64;
+}
+
+.tile-header {
+  @apply .text-grey .font-sans .font-light .px-2 .inline-block;
+}
+
+.tile-list-button-text {
+  @apply .p-2 .text-grey .font-sans .font-light .block .text-left;
+}

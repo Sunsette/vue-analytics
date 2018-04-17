@@ -1,0 +1,7 @@
+.list-heading {
+  @apply .p-2 .text-grey .font-sans .font-light .block .text-left;
+}
+
+.list-item{
+  @apply .bg-grey-light .text-white .p-2 .border-white .border-b;
+}
